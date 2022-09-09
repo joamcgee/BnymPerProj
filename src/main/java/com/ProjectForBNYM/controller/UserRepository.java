@@ -9,7 +9,6 @@ import java.util.List;
 
 
 @Repository
-    public interface UserRepository extends JpaRepository<User, Long> {
-        List<UserModel> getAllUsers();
+    public interface UserRepository extends JpaRepository<UserModel, Long> {
     }
 

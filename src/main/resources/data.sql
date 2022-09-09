@@ -1,0 +1,3 @@
+INSERT INTO user_table (user_id, first_name, last_name, img) VALUES (256779, 'Darrel', 'Johns', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPnVpSvN_sFj9Hp6vhW6QrKyI3w1kwbLcq3A&usqp=CAU');
+INSERT INTO user_table (user_id, first_name, last_name, img) VALUES (354668, 'Phil', 'Smith', 'https://media.istockphoto.com/photos/success-businessman-smiling-in-office-picture-id1189303518?k=20&m=1189303518&s=612x612&w=0&h=IjiDHtLQEBxdOQF-ukX-w4H53HRum8VAsoSj12ShX_s=');
+INSERT INTO user_table (user_id, first_name, last_name, img) VALUES (798334, 'Reese', 'Andrews', 'https://media.istockphoto.com/photos/successful-mature-business-woman-looking-at-camera-picture-id1189303232?b=1&k=20&m=1189303232&s=612x612&w=0&h=PzjzQkgZ8-WRB7U4FOM5rlD-S_PNG8ctq1WpxqEyjlk=');

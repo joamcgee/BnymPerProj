@@ -24,7 +24,8 @@ public class UserProfile implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String profileId;
+    @Column
+    private String Id;
     @Column
     private String employeeId;
     @Column
@@ -35,7 +36,10 @@ public class UserProfile implements Serializable {
     public LocalDate dateJoined;
     @Column
     public long salary;
-    @ElementCollection
-    public List<String> skills;
+    @Column
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_and_Skill_table", joinColumns = @JoinColumn(name = "profileId", referencedColumnName = "Id"),
+    inverseJoinColumns = @JoinColumn(name = "skillId", referencedColumnName = "Id"))
+    public List<SkillsModel> skills;
 
 }

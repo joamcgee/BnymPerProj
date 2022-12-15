@@ -1,36 +1,40 @@
 package com.ProjectForBNYM.service;
 
+import com.ProjectForBNYM.controller.SkillsRepo;
 import com.ProjectForBNYM.controller.UserRepo;
+import com.ProjectForBNYM.model.SkillsModel;
 import com.ProjectForBNYM.model.UserProfile;
-import jdk.swing.interop.SwingInterOpUtils;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.*;
 
 @Service
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class UserService {
     @Autowired(required = true)
-    UserRepo userRepo;
+    private final UserRepo userRepo;
+    @Autowired
+    private final SkillsRepo skillsRepo;
+    @Autowired
+    private final SkillsService skillsService;
 
     public List<UserProfile> getAllProfile() {
         return userRepo.findAll();
     }
-    public UserProfile getByID(String profileId){
-        return userRepo.findByProfileId(profileId);
+    public Optional<UserProfile> getByID(String Id){
+        return userRepo.findById(Id);
         }
 
     public List<UserProfile> getByName(String name) {
+        //grabbing a list of records
         List<UserProfile> records = userRepo.findAll();
+        //creating a list to populate
         List<UserProfile> listOfExperts = new ArrayList<>();
+        //for each record inside the list of records w/ "name", the system will render those users.
         records.forEach((record) -> {
             if (record.getName().equals(name)) {
                 listOfExperts.add(record);
@@ -41,14 +45,16 @@ public class UserService {
     }
 
     //
-    public List<UserProfile> getBySkill(String skills) {
+    public List<UserProfile> getBySkill(String skillname) {
+        //grabbing one skill ("skillName")
+        SkillsModel skillsRecord = skillsService.getSkillByName(skillname);
         //grabbing a list of records
         List<UserProfile> records = userRepo.findAll();
         //creating a list to populate
         List<UserProfile> listOfProfiles = new ArrayList<>();
         //for each record inside the list of records w/ "skill", the system will render those users.
         records.forEach((record) -> {
-            if (record.getSkills().contains(skills)) {
+            if (record.getSkills().contains(skillsRecord)) {
                 listOfProfiles.add(record);
             } else {
                 System.out.println("Users not found");
@@ -61,27 +67,27 @@ public class UserService {
         UserProfile addedUser = new UserProfile();
         int count = 0;
         for (int i = 0; i < userProfile.getName().length(); i++) {
-            if (userProfile.getName().charAt(i) != ' ' )
-                count ++;
+            if (userProfile.getName().charAt(i) != ' ')
+                count++;
         }
-        if (count >= 3 ) {
+        if (count >= 3) {
             addedUser.setEmployeeId(userProfile.getEmployeeId());
             addedUser.setName(userProfile.getName());
             addedUser.setDepartment(userProfile.getDepartment());
             addedUser.setDateJoined(LocalDate.now());
             addedUser.setSalary(userProfile.getSalary());
-            addedUser.setSkills(userProfile.getSkills());
-
-            return userRepo.save(addedUser);
-
-        } else {
-            System.out.println("Name field does not meet requirement of 3 character minimum");
-            return null;
+            if (userProfile.getSkills() != null) {
+                addedUser.setSkills(userProfile.getSkills());
             }
-    }
 
-    public void deleteById(String profileId) {
-        userRepo.deleteById(profileId);
-    }
+                return userRepo.save(addedUser);
+
+            } else {
+                System.out.println("Name field does not meet requirement of 3 character minimum");
+                return null;
+            }
+        }
+
+    public void deleteById(String profileId) { userRepo.deleteById(profileId); }
 
 }

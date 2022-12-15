@@ -1,0 +1,21 @@
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("121", "John Oswald", "Finance", 80000, "Sales Force", "Budgeting", "Math");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("122", "Devin Hall", "Finance", 83010, "Accounting", "Analytical", "Management");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("123", "Donald Kennedy", "Finance", 80500, "Communication", "Reporting", "Investing");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("124", "Jacob Williams", "Finance", 80000, "Analytical", "Financial Modeling", "Cash Flow Management");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("125", "Natalie Gerling", "Finance", 80000, "Math", "Budgeting", "Data Management");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("131", "Sasha Herrington", "Technology", 90000, "Azure", "HTML", "SQL");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("132", "Conner Matthews", "Technology", 95000, ".NET", "Angular", "C#");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("133", "Jaden Cross", "Technology", 80000, "Java", "HTML", "CSS");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("134", "Keaton Johnson", "Technology", 100000, "Python", "PyCharm", "TypeScript");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("135", "Julia Henry", "Technology", 75175, "IntelliJ", "JavaScript", "TTD");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("141", "Leslie Fraser", "Human Resources", 80000, "Communication", "Microsoft Power Point", "Leadership");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("142", "Seth Rogan", "Human Resources", 85655, "Strategic Thinking", "Management", "Interpersonal");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("143", "Julian Sawyer", "Human Resources", 84370, "Planning", "Career Development", "Leadership");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("144", "Michael Jackson", "Human Resources", 80000, "Scheduling", "Employee Relations", "SQL");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("145", "Kaitlin Covington", "Human Resources", 80000, "HRIS", "Onboarding", "Payroll Processing");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("151", "Fred Durango", "Marketing", 50000, "Creativity", "Writing", "Interpersonal Communication");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("152", "Sarah Colson", "Marketing", 70000, "Digital Advertising", "Teamwork", "Time Management");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("153", "Connor Johnson", "Marketing", 50000, "Analytics", "Writing", "Storytelling");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("154", "Riley Lipe", "Marketing", 60000, "Social Media Management", "Digital Advertising", "Communication");
+INSERT INTO profile_table (employeeId, name, department, dataJoined, salary, skills) VALUES ("155", "Alex Mack", "Marketing", 100000, "Creativity", "Research", "Collaboration"]);
+

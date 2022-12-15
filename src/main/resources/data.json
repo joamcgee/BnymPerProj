@@ -1,0 +1,22 @@
+[
+  {"employeeId" : "121", "name" : "John Oswald", "department" : "Finance", "salary" : 80000, "skills": ["Sales Force", "Budgeting", "Math"]},
+  {"employeeId" : "122", "name" : "Devin Hall", "department" : "Finance", "salary" : 83010, "skills": ["Accounting", "Analytical", "Management"]},
+  {"employeeId" : "123", "name" : "Donald Kennedy", "department" : "Finance", "salary" : 80500, "skills": ["Communication", "Reporting", "Investing"]},
+  {"employeeId" : "124", "name" : "Jacob Williams", "department" : "Finance", "salary" : 80000, "skills": ["Analytical", "Financial Modeling", "Cash Flow Management"]},
+  {"employeeId" : "125", "name" : "Natalie Gerling", "department" : "Finance", "salary" : 80000, "skills": ["Math", "Budgeting", "Data Management"]},
+  {"employeeId" : "131", "name" : "Sasha Herrington", "department" : "Technology", "salary" : 90000, "skills": ["Azure", "HTML", "SQL"]},
+  {"employeeId" : "132", "name" : "Conner Matthews", "department" : "Technology", "salary" : 95000, "skills": [".NET", "Angular", "C#"]},
+  {"employeeId" : "133", "name" : "Jaden Cross", "department" : "Technology", "salary" : 80000, "skills": ["Java", "HTML", "CSS"]},
+  {"employeeId" : "134", "name" : "Keaton Johnson", "department" : "Technology", "salary" : 100000, "skills": ["Python", "PyCharm", "TypeScript"]},
+  {"employeeId" : "135", "name" : "Julia Henry", "department" : "Technology", "salary" : 75175, "skills": ["IntelliJ", "JavaScript", "TTD"]},
+  {"employeeId" : "141", "name" : "Leslie Fraser", "department" : "Human Resources", "salary" : 80000, "skills": ["Communication", "Microsoft Power Point", "Leadership"]},
+  {"employeeId" : "142", "name" : "Seth Rogan", "department" : "Human Resources", "salary" : 85655, "skills": ["Strategic Thinking", "Management", "Interpersonal"]},
+  {"employeeId" : "143", "name" : "Julian Sawyer", "department" : "Human Resources", "salary" : 84370, "skills": ["Planning", "Career Development", "Leadership"]},
+  {"employeeId" : "144", "name" : "Michael Jackson", "department" : "Human Resources", "salary" : 80000, "skills": ["Scheduling", "Employee Relations", "SQL"]},
+  {"employeeId" : "145", "name" : "Kaitlin Covington", "department" : "Human Resources", "salary" : 80000, "skills": ["HRIS", "Onboarding", "Payroll Processing"]},
+  {"employeeId" : "151", "name" : "Fred Durango", "department" : "Marketing", "salary" : 50000, "skills": ["Creativity", "Writing", "Interpersonal Communication"]},
+  {"employeeId" : "152", "name" : "Sarah Colson", "department" : "Marketing", "salary" : 70000, "skills": ["Digital Advertising", "Teamwork", "Time Management"]},
+  {"employeeId" : "153", "name" : "Connor Johnson", "department" : "Marketing", "salary" : 50000, "skills": ["Analytics", "Writing", "Storytelling"]},
+  {"employeeId" : "154", "name" : "Riley Lipe", "department" : "Marketing", "salary" : 60000, "skills": ["Social Media Management", "Digital Advertising", "Communication"]},
+  {"employeeId" : "155", "name" : "Alex Mack", "department" : "Marketing", "salary" : 100000, "skills": ["Creativity", "Research", "Collaboration"]}
+]

@@ -1,4 +1,4 @@
-package com.ProjectForBNYM.controller;
+package com.ProjectForBNYM.repository;
 
 import com.ProjectForBNYM.model.UserProfile;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -17,4 +17,8 @@ public interface UserRepo extends JpaRepository<UserProfile, String> {
     UserProfile findByName(String name);
 
     List<UserProfile> findAll();
+
+    List<UserProfile> findByDepartment(String department);
+
+
 }

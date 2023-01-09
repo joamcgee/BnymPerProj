@@ -1,15 +1,11 @@
 package com.ProjectForBNYM.service;
 
-import com.ProjectForBNYM.controller.SkillsRepo;
-import com.ProjectForBNYM.controller.UserRepo;
 import com.ProjectForBNYM.model.SkillsModel;
-import com.ProjectForBNYM.model.UserProfile;
+import com.ProjectForBNYM.repository.SkillsRepo;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 
 @Service
 @AllArgsConstructor
@@ -20,13 +16,21 @@ public class SkillsService {
 
     public SkillsModel getSkillByName(String skillName) {
 
-        return skillsRepo.getSkillBySkillName(skillName);
+        return skillsRepo.getSkillBySkillName((skillName));
     }
 
     public SkillsModel saveAddedSkill(SkillsModel skillsModel) {
-
+        SkillsModel record = skillsRepo.getSkillBySkillName(skillsModel.getSkillName());
         SkillsModel addedSkill = new SkillsModel();
-        addedSkill.setSkillName(skillsModel.getSkillName());
+        try {
+            if (!(record == skillsModel)) {
+                addedSkill.setSkillName(skillsModel.getSkillName());
+                }
+            } catch (Exception e) {
+            System.out.println("duplicate found ");
+            throw e;
+        }
+
 
         return skillsRepo.save(addedSkill);
     }

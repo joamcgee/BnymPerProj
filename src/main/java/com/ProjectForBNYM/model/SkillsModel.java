@@ -7,7 +7,6 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "skills_table")
@@ -16,9 +15,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SkillsModel {
-//    @ManyToMany (mappedBy = "skills",fetch = FetchType.LAZY)
-//    @JoinColumn (name = "UsSk_fk", referencedColumnName = "profileId")
-//    private List<UserProfile> userProfiles;
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -26,5 +22,7 @@ public class SkillsModel {
     private String id;
     @Column
     private String skillName;
+
+
 
 }

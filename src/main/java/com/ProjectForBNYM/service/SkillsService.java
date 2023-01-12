@@ -1,15 +1,11 @@
 package com.ProjectForBNYM.service;
 
-import com.ProjectForBNYM.controller.SkillsRepo;
-import com.ProjectForBNYM.controller.UserRepo;
+import com.ProjectForBNYM.Repositories.SkillsRepo;
 import com.ProjectForBNYM.model.SkillsModel;
-import com.ProjectForBNYM.model.UserProfile;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 
 @Service
 @AllArgsConstructor

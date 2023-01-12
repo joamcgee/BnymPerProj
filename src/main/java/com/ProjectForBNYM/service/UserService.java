@@ -1,6 +1,6 @@
 package com.ProjectForBNYM.service;
 
-import com.ProjectForBNYM.controller.SkillsRepo;
+import com.ProjectForBNYM.Repositories.SkillsRepo;
 import com.ProjectForBNYM.controller.UserRepo;
 import com.ProjectForBNYM.model.SkillsModel;
 import com.ProjectForBNYM.model.UserProfile;

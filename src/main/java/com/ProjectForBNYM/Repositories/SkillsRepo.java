@@ -1,4 +1,4 @@
-package com.ProjectForBNYM.controller;
+package com.ProjectForBNYM.Repositories;
 
 
 import com.ProjectForBNYM.model.SkillsModel;

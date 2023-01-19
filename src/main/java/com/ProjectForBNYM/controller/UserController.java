@@ -62,7 +62,7 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new UserProfile());
         }
 
-            //Create a try-catch exception handleing using controller advise using springboot
+            //Create a try-catch exception handling using controller advise using springboot
                 // message should have timestamp and entity error message
         }
 

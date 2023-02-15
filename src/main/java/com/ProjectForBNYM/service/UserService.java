@@ -45,9 +45,9 @@ public class UserService {
     }
 
     //
-    public List<UserProfile> getBySkill(String skillname) {
+    public List<UserProfile> getBySkill(String skillName) {
         //grabbing one skill ("skillName")
-        SkillsModel skillsRecord = skillsService.getSkillByName(skillname);
+        SkillsModel skillsRecord = skillsService.getSkillByName(skillName);
         //grabbing a list of records
         List<UserProfile> records = userRepo.findAll();
         //creating a list to populate

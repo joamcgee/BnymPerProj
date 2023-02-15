@@ -1,5 +1,6 @@
 package com.ProjectForBNYM.controller;
 
+import com.ProjectForBNYM.ExceptionHandling.ResourceNotFoundException;
 import com.ProjectForBNYM.model.UserProfile;
 import com.ProjectForBNYM.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,22 +32,32 @@ public class UserController {
     //ResponseeEntity gives http status update 
     @GetMapping(PROFILE + "/get-profile-by-id")
     public ResponseEntity<UserProfile> getByID(@RequestParam String profile_id) {
-        Optional<UserProfile> response = userService.getByID(profile_id);
+        try {Optional<UserProfile> response = userService.getByID(profile_id);
         return ResponseEntity.ok().body(response.get());
+        }  catch (Exception e) {
+            throw new ResourceNotFoundException("No profile details found for " + profile_id);
+        }
    }
+
 
    //get employee profile by name
    @GetMapping(PROFILE + "/name")
     public ResponseEntity<List<UserProfile>> getByName(@RequestParam String name){
-       List<UserProfile> response = userService.getByName(name);
+       try {List<UserProfile> response = userService.getByName(name);
         return ResponseEntity.ok().body(response);
+       }  catch (Exception e) {
+           throw new ResourceNotFoundException("No profile details found for " + name );
+       }
     }
 
     //get employee profile by skill
     @GetMapping(PROFILE + "/skill")
     public ResponseEntity<List<UserProfile>> getBySkill(@RequestParam String skillName){
-        List<UserProfile> response = userService.getBySkill(skillName);
+       try { List<UserProfile> response = userService.getBySkill(skillName);
         return ResponseEntity.ok().body(response);
+       }  catch (Exception e) {
+           throw new ResourceNotFoundException("No profile details found for " + skillName);
+       }
     }
 
     //insert employee details

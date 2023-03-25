@@ -1,5 +1,6 @@
 package com.ProjectForBNYM.controller;
 
+import com.ProjectForBNYM.ExceptionHandling.ErrorMessageModel;
 import com.ProjectForBNYM.ExceptionHandling.ResourceNotFoundException;
 import com.ProjectForBNYM.model.UserProfile;
 import com.ProjectForBNYM.service.UserService;
@@ -8,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -80,7 +82,7 @@ public class UserController {
     @DeleteMapping(PROFILE + "/delete")
     public ResponseEntity<String> deleteById(@RequestParam String Id){
         userService.deleteById(Id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(""); //no content status update doesn't body messages
+        return ResponseEntity.ok("Employee Profile Deleted, ID: " + Id);
     }
 
 }

@@ -88,6 +88,8 @@ public class UserService {
             }
         }
 
-    public void deleteById(String profileId) { userRepo.deleteById(profileId); }
+    public void deleteById(String profileId) {
+        userRepo.deleteById(profileId);
+    }
 
 }
